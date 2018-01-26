@@ -13,6 +13,8 @@ public class DolphinMovement : MonoBehaviour {
 
     public bool mouseMovement;
 
+
+    public float maxSpeed = 20;
     private void Start() {
         rigidbody = GetComponent<Rigidbody2D>();
     }
@@ -32,10 +34,11 @@ public class DolphinMovement : MonoBehaviour {
         float vertical = Input.GetAxis("Vertical");
 
         transform.Rotate(0,0, horizontal * rotateSpeed);
-
-        rigidbody.AddForce(transform.up * speed);
+        rigidbody.AddForce(transform.up * speed * vertical);
+        print(rigidbody.velocity.magnitude);
+        Debug.DrawRay(transform.position, rigidbody.velocity);
         if (horizontal > 0 || horizontal < 0) {
-            rigidbody.AddForce(-transform.up * speed);
+            rigidbody.velocity = transform.up * Mathf.Clamp(rigidbody.velocity.magnitude, 0, maxSpeed);
         }
     }
 
