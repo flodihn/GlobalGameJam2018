@@ -66,7 +66,12 @@ public class WaveGenerator : MonoBehaviour {
 	}
 
 	private void FadeOut() {
+		if (spriteRenders == null)
+			return;
 		foreach (SpriteRenderer spriteRenderer in spriteRenders) {
+			if (spriteRenderer == null) {
+				continue;
+			}
 			float newAlpha = spriteRenderer.color.a - Time.deltaTime * fadeOutDelta;
 			spriteRenderer.color = new Color (
 				spriteRenderer.color.r,
