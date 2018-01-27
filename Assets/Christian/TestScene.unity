@@ -120,8 +120,9 @@ GameObject:
   - component: {fileID: 46046353}
   - component: {fileID: 46046355}
   - component: {fileID: 46046354}
+  - component: {fileID: 46046356}
   m_Layer: 0
-  m_Name: Gravitator
+  m_Name: GravitatorStar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -134,8 +135,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 46046352}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 3.81, y: 6.32, z: 0}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1000, y: 1000, z: 100}
   m_Children: []
   m_Father: {fileID: 285776523}
   m_RootOrder: 0
@@ -173,7 +174,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 8816bb7f7413745b4829a3ec95294380, type: 3}
-  m_Color: {r: 0.63306284, g: 0.60294116, b: 1, a: 1}
+  m_Color: {r: 0.862069, g: 0.759, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -192,7 +193,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84c04119c72ad43bc9f561f193d51b33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  strength: 100
+  strength: 1000
+--- !u!114 &46046356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 46046352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b143ac9ea66b4eef95a324ffd3c8afc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerAmplifier: 1
 --- !u!1 &127552057
 GameObject:
   m_ObjectHideFlags: 0
@@ -221,7 +234,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100.000595, z: 100.000595}
   m_Children: []
   m_Father: {fileID: 285776523}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!212 &127552059
 SpriteRenderer:
@@ -404,7 +417,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 46046353}
-  - {fileID: 728311166}
   - {fileID: 822214078}
   - {fileID: 1542066910}
   - {fileID: 1851951199}
@@ -416,7 +428,8 @@ Transform:
   - {fileID: 814800151}
   - {fileID: 1813904095}
   - {fileID: 1276584501}
-  - {fileID: 435989737}
+  - {fileID: 1514503990}
+  - {fileID: 1607850800}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -431,7 +444,7 @@ GameObject:
   - component: {fileID: 435989739}
   - component: {fileID: 435989738}
   m_Layer: 0
-  m_Name: Gravitator (13)
+  m_Name: GravitatorBody2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -445,10 +458,10 @@ Transform:
   m_GameObject: {fileID: 435989736}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: -118, y: 8, z: 152}
-  m_LocalScale: {x: 500, y: 500, z: 500}
+  m_LocalScale: {x: 500, y: 500.00024, z: 500.00024}
   m_Children: []
-  m_Father: {fileID: 285776523}
-  m_RootOrder: 13
+  m_Father: {fileID: 1607850800}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!212 &435989738
 SpriteRenderer:
@@ -583,13 +596,27 @@ GameObject:
   - component: {fileID: 540453890}
   - component: {fileID: 540453891}
   - component: {fileID: 540453892}
+  - component: {fileID: 540453889}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &540453889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 540453888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8628dd5353659459cacd2ec353530743, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  power: 10000
+  forceMultiplier: 20
 --- !u!4 &540453890
 Transform:
   m_ObjectHideFlags: 0
@@ -597,7 +624,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 540453888}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.6, y: 0, z: -8.8}
+  m_LocalPosition: {x: -77, y: 0, z: 158}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1313724206}
@@ -617,6 +644,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gravitatorRoot: {fileID: 285776522}
+  forceMultiplier: 0.1
   speed: 0
   gravitationDrag: 0
 --- !u!54 &540453892
@@ -627,8 +655,8 @@ Rigidbody:
   m_GameObject: {fileID: 540453888}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_Drag: 0.1
+  m_AngularDrag: 0.1
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 1
@@ -645,7 +673,7 @@ GameObject:
   - component: {fileID: 728311168}
   - component: {fileID: 728311167}
   m_Layer: 0
-  m_Name: Gravitator (1)
+  m_Name: GravitatorBody1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -658,11 +686,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 728311165}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -49.7, y: 6, z: -23.7}
-  m_LocalScale: {x: 100, y: 100.0001, z: 100.0001}
+  m_LocalPosition: {x: -86, y: 6, z: -23.7}
+  m_LocalScale: {x: 100, y: 100.00016, z: 100.00016}
   m_Children: []
-  m_Father: {fileID: 285776523}
-  m_RootOrder: 1
+  m_Father: {fileID: 1514503990}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!212 &728311167
 SpriteRenderer:
@@ -697,7 +725,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 8816bb7f7413745b4829a3ec95294380, type: 3}
-  m_Color: {r: 0.63306284, g: 0.60294116, b: 1, a: 1}
+  m_Color: {r: 0.75, g: 0.18198529, b: 0.18198529, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -745,7 +773,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100.001, z: 100.001}
   m_Children: []
   m_Father: {fileID: 285776523}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!212 &814800152
 SpriteRenderer:
@@ -811,7 +839,7 @@ GameObject:
   - component: {fileID: 822214080}
   - component: {fileID: 822214079}
   m_Layer: 0
-  m_Name: Gravitator (2)
+  m_Name: GravitatorBody2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -828,7 +856,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 285776523}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!212 &822214079
 SpriteRenderer:
@@ -911,7 +939,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100.0007, z: 100.0007}
   m_Children: []
   m_Father: {fileID: 285776523}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!212 &835996026
 SpriteRenderer:
@@ -994,7 +1022,7 @@ Transform:
   m_LocalScale: {x: 200, y: 200, z: 200}
   m_Children: []
   m_Father: {fileID: 285776523}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!212 &849121025
 SpriteRenderer:
@@ -1077,7 +1105,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100.000496, z: 100.000496}
   m_Children: []
   m_Father: {fileID: 285776523}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!212 &945750750
 SpriteRenderer:
@@ -1160,7 +1188,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100.0009, z: 100.0009}
   m_Children: []
   m_Father: {fileID: 285776523}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!212 &1206846134
 SpriteRenderer:
@@ -1243,7 +1271,7 @@ Transform:
   m_LocalScale: {x: 300, y: 300, z: 300}
   m_Children: []
   m_Father: {fileID: 285776523}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!212 &1276584502
 SpriteRenderer:
@@ -4575,6 +4603,48 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+--- !u!1 &1514503989
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1514503990}
+  - component: {fileID: 1514503991}
+  m_Layer: 0
+  m_Name: BaseRotator1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1514503990
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1514503989}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 728311166}
+  m_Father: {fileID: 285776523}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1514503991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1514503989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d41e5d50fe5c4fe19a9a9c672f71d5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotateSpeed: 1
 --- !u!1 &1542066909
 GameObject:
   m_ObjectHideFlags: 0
@@ -4586,7 +4656,7 @@ GameObject:
   - component: {fileID: 1542066912}
   - component: {fileID: 1542066911}
   m_Layer: 0
-  m_Name: Gravitator (3)
+  m_Name: GravitatorBody3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4603,7 +4673,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100.0003, z: 100.0003}
   m_Children: []
   m_Father: {fileID: 285776523}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!212 &1542066911
 SpriteRenderer:
@@ -4658,6 +4728,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   strength: 100
+--- !u!1 &1607850799
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1607850800}
+  - component: {fileID: 1607850801}
+  m_Layer: 0
+  m_Name: BaseRotator2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1607850800
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1607850799}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 435989737}
+  m_Father: {fileID: 285776523}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1607850801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1607850799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d41e5d50fe5c4fe19a9a9c672f71d5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotateSpeed: 1
 --- !u!1 &1813904094
 GameObject:
   m_ObjectHideFlags: 0
@@ -4686,7 +4798,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100.0011, z: 100.0011}
   m_Children: []
   m_Father: {fileID: 285776523}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!212 &1813904096
 SpriteRenderer:
@@ -4769,7 +4881,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100.0004, z: 100.0004}
   m_Children: []
   m_Father: {fileID: 285776523}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!212 &1851951200
 SpriteRenderer:

@@ -7,6 +7,7 @@ public class WaveGenerator : MonoBehaviour {
 	public GameObject[] wavePrefabs;
 	public float waveSpeed = 10.0f;
 	public float lifetime = 5.0f;
+	public float spawnTime = 0.5f;
 
 	private GameObject[] waveInstances;
 	private List<SpriteRenderer> spriteRenders = new List<SpriteRenderer>();
@@ -37,7 +38,7 @@ public class WaveGenerator : MonoBehaviour {
 
 		timePassedSinceLastCreatedWave += Time.deltaTime;
 
-		if (timePassedSinceLastCreatedWave > 0.5f) {
+		if (timePassedSinceLastCreatedWave > spawnTime) {
 			GameObject waveInst = (GameObject) Instantiate(
 				wavePrefabs[waveCreateIndex],
 				transform.position,

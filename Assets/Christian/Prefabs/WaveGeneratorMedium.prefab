@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1719931559778450}
+  m_IsPrefabParent: 1
+--- !u!1 &1719931559778450
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4194210714675614}
+  - component: {fileID: 114433248719160104}
+  m_Layer: 0
+  m_Name: WaveGeneratorMedium
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4194210714675614
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1719931559778450}
+  m_LocalRotation: {x: -0, y: -0, z: 0.43286002, w: 0.9014612}
+  m_LocalPosition: {x: -1, y: 0.74, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 51.298004}
+--- !u!114 &114433248719160104
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1719931559778450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32aa0405dae884631a298e0e09242cb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveColor: {r: 0.19706964, g: 0.99264705, b: 0.82804483, a: 1}
+  wavePrefabs:
+  - {fileID: 1215236144531516, guid: d01cad91eca7142cbab6f738d3d5580c, type: 2}
+  - {fileID: 1215236144531516, guid: d01cad91eca7142cbab6f738d3d5580c, type: 2}
+  - {fileID: 1215236144531516, guid: d01cad91eca7142cbab6f738d3d5580c, type: 2}
+  - {fileID: 1215236144531516, guid: d01cad91eca7142cbab6f738d3d5580c, type: 2}
+  - {fileID: 1215236144531516, guid: d01cad91eca7142cbab6f738d3d5580c, type: 2}
+  - {fileID: 1215236144531516, guid: d01cad91eca7142cbab6f738d3d5580c, type: 2}
+  waveSpeed: 1
+  lifetime: 5
