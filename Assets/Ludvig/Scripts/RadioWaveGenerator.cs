@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DolphinWaveGenerator : MonoBehaviour {
+public class RadioWaveGenerator : MonoBehaviour {
 
     public Color waveColor;
     public GameObject[] wavePrefabs;
@@ -24,12 +24,14 @@ public class DolphinWaveGenerator : MonoBehaviour {
         waveInstances = new GameObject[wavePrefabs.Length];
         fadeOutDelta = 1.0f / lifetime;
         currentLifetime = lifetime;
+        MoveForward();
+        Destroy(gameObject, lifetime);
     }
 
     public void Update() {
         CreateNextWave();
-        MoveForward();
         FadeOut();
+        
         DestroyWaveIfFadedOut();
         DestroyWaveGeneratorIfReachedLifetime();
     }
@@ -55,16 +57,6 @@ public class DolphinWaveGenerator : MonoBehaviour {
             spriteRenders.Add(spriteRenderer);
             currentLifetime = lifetime;
             waveCreateIndex++;
-        }
-    }
-
-    private void MoveForward() {
-        for (int i = 0; i < waveInstances.Length; i++) {
-            GameObject wave = waveInstances[i];
-            if (wave == null)
-                continue;
-
-            wave.transform.Translate(Vector3.right * Time.deltaTime * waveSpeed);
         }
     }
 
@@ -101,10 +93,19 @@ public class DolphinWaveGenerator : MonoBehaviour {
         }
     }
 
+    private void MoveForward() {
+        for (int i = 0; i < waveInstances.Length; i++) {
+            GameObject wave = waveInstances[i];
+            if (wave == null)
+                continue;
+
+            wave.transform.Translate(Vector3.right * Time.deltaTime * waveSpeed);
+        }
+    }
+
     private void DestroyWaveGeneratorIfReachedLifetime() {
         currentLifetime -= Time.deltaTime;
         if (currentLifetime < 0)
             Destroy(gameObject);
     }
 }
-

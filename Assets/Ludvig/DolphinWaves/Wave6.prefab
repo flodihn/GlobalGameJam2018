@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 222265778173634940}
   - component: {fileID: 212178810087711588}
   - component: {fileID: 60591736310106754}
+  - component: {fileID: 114581842087114868}
+  - component: {fileID: 50023795621582514}
   m_Layer: 0
   m_Name: Wave6
   m_TagString: Untagged
@@ -29,6 +31,26 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!50 &50023795621582514
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1612518776509734}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!60 &60591736310106754
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -85,6 +107,18 @@ PolygonCollider2D:
       - {x: -0.17, y: -1.3199999}
       - {x: -0.099999994, y: -1.24}
       - {x: -0.049999997, y: -1.17}
+--- !u!114 &114581842087114868
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1612518776509734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fde92f76585098d47ba209cc5252dcc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 1252789103159788, guid: 60ab51fcee6c53a4583b8c71e4576767, type: 2}
 --- !u!212 &212178810087711588
 SpriteRenderer:
   m_ObjectHideFlags: 1
