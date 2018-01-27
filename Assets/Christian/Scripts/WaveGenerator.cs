@@ -7,6 +7,7 @@ public class WaveGenerator : MonoBehaviour {
 	public GameObject[] wavePrefabs;
 	public float waveSpeed = 10.0f;
 	public float lifetime = 5.0f;
+	public float spawnTime = 0.5f;
 
 	private GameObject[] waveInstances;
 	private List<SpriteRenderer> spriteRenders = new List<SpriteRenderer>();
@@ -37,7 +38,7 @@ public class WaveGenerator : MonoBehaviour {
 
 		timePassedSinceLastCreatedWave += Time.deltaTime;
 
-		if (timePassedSinceLastCreatedWave > 0.5f) {
+		if (timePassedSinceLastCreatedWave > spawnTime) {
 			GameObject waveInst = (GameObject) Instantiate(
 				wavePrefabs[waveCreateIndex],
 				transform.position,
@@ -47,7 +48,7 @@ public class WaveGenerator : MonoBehaviour {
 
 			timePassedSinceLastCreatedWave = 0.0f;
 			SpriteRenderer spriteRenderer = waveInst.GetComponent<SpriteRenderer> ();
-			spriteRenderer.material.color = waveColor;
+			spriteRenderer.color = waveColor;
 			spriteRenders.Add (spriteRenderer);
 			currentLifetime = lifetime;
 			waveCreateIndex++;
@@ -65,7 +66,12 @@ public class WaveGenerator : MonoBehaviour {
 	}
 
 	private void FadeOut() {
+		if (spriteRenders == null)
+			return;
 		foreach (SpriteRenderer spriteRenderer in spriteRenders) {
+			if (spriteRenderer == null) {
+				continue;
+			}
 			float newAlpha = spriteRenderer.color.a - Time.deltaTime * fadeOutDelta;
 			spriteRenderer.color = new Color (
 				spriteRenderer.color.r,
