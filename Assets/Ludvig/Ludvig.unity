@@ -704,6 +704,16 @@ Prefab:
       propertyPath: maxSpeed
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114879705614298720, guid: afd0ed70c170e294fa6efdfc96798c50,
+        type: 2}
+      propertyPath: dolphinShoot.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 488c6db95abad49ab9ac3c3b0b2be87a, type: 3}
+    - target: {fileID: 114879705614298720, guid: afd0ed70c170e294fa6efdfc96798c50,
+        type: 2}
+      propertyPath: dolphinShoot.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: f1924df5d934e469fb3799e9192011a9, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: afd0ed70c170e294fa6efdfc96798c50, type: 2}
   m_IsPrefabParent: 0

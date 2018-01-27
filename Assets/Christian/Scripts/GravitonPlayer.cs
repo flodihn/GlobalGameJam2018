@@ -7,6 +7,7 @@ public class GravitonPlayer : MonoBehaviour {
 
 	private Gravitator[] allGravitarors;
 	private Rigidbody myRigidBody;
+	public float forceMultiplier = 0.1f;
 	public float speed;
 	public float gravitationDrag = 0.0f;
 
@@ -26,7 +27,7 @@ public class GravitonPlayer : MonoBehaviour {
 		}
 
 		speed = myRigidBody.velocity.magnitude;
-		myRigidBody.AddRelativeForce (Vector3.forward * Time.fixedDeltaTime * gravitationDrag, ForceMode.Impulse);
+		myRigidBody.AddRelativeForce (Vector3.forward * Time.fixedDeltaTime * gravitationDrag * forceMultiplier, ForceMode.Impulse);
 
 	}
 
@@ -43,7 +44,7 @@ public class GravitonPlayer : MonoBehaviour {
 		float rotationAngle = Mathf.Atan2(inverseVect.x,inverseVect.z) * Mathf.Rad2Deg;
 		Vector3 rotationVelocity = (Vector3.up * rotationAngle); 
 		Vector3 deltavel = (rotationVelocity - myRigidBody.angularVelocity); 
-		myRigidBody.AddTorque(deltavel * rotatationSpeed * 1000.0f, ForceMode.Impulse);
+		myRigidBody.AddTorque(deltavel * rotatationSpeed, ForceMode.Impulse);
 
 		gravitationDrag += gravitatorMultiplier;
 	}
