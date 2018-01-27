@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Trump radio tower
+  - Kim radio tower
+  - kim_slider
   layers:
   - Default
   - TransparentFX
