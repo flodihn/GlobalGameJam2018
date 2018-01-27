@@ -1,13 +1,9 @@
 fileFormatVersion: 2
-guid: 005ea4c84320edd4bb0994372f23a099
-timeCreated: 1517003657
+guid: 11c4c9d9828e5f44d9797976673295ea
+timeCreated: 1517052734
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: dolpheonix_0
-    21300002: dolpheonix_1
-    21300004: dolpheonix_2
-    21300006: dolpheonix_3
+  fileIDToRecycleName: {}
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -38,7 +34,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -72,59 +68,7 @@ TextureImporter:
     overridden: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: dolpheonix_0
-      rect:
-        serializedVersion: 2
-        x: 3
-        y: 7
-        width: 28
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: dolpheonix_1
-      rect:
-        serializedVersion: 2
-        x: 33
-        y: 8
-        width: 30
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: dolpheonix_2
-      rect:
-        serializedVersion: 2
-        x: 65
-        y: 7
-        width: 30
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: dolpheonix_3
-      rect:
-        serializedVersion: 2
-        x: 97
-        y: 9
-        width: 31
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
+    sprites: []
     outline: []
   spritePackingTag: 
   userData: 

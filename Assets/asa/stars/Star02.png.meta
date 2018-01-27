@@ -1,13 +1,12 @@
 fileFormatVersion: 2
-guid: 005ea4c84320edd4bb0994372f23a099
-timeCreated: 1517003657
+guid: a40878724d19e0f43bcef9a54925bd51
+timeCreated: 1517053221
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: dolpheonix_0
-    21300002: dolpheonix_1
-    21300004: dolpheonix_2
-    21300006: dolpheonix_3
+    21300000: Star02_0
+    21300002: Star02_1
+    21300004: Star02_2
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -41,7 +40,7 @@ TextureImporter:
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 0
+  alignment: 9
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
@@ -74,58 +73,70 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dolpheonix_0
+      name: Star02_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 7
-        width: 28
-        height: 13
+        x: 0
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: dolpheonix_1
+      name: Star02_1
       rect:
         serializedVersion: 2
-        x: 33
-        y: 8
-        width: 30
-        height: 12
+        x: 16
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: dolpheonix_2
+      name: Star02_2
       rect:
         serializedVersion: 2
-        x: 65
-        y: 7
-        width: 30
-        height: 14
+        x: 32
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
-    - serializedVersion: 2
-      name: dolpheonix_3
-      rect:
-        serializedVersion: 2
-        x: 97
-        y: 9
-        width: 31
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    outline: []
+    outline:
+    - - {x: -1, y: 7}
+      - {x: -3, y: 6}
+      - {x: -7, y: 1}
+      - {x: -6, y: -2}
+      - {x: -3, y: -6}
+      - {x: 1, y: -6}
+      - {x: 6, y: -3}
+      - {x: 6, y: 1}
+      - {x: 1, y: 7}
+    - - {x: 13, y: 7}
+      - {x: 9, y: 3}
+      - {x: 9, y: -2}
+      - {x: 13, y: -6}
+      - {x: 16, y: -6}
+      - {x: 22, y: -1}
+      - {x: 22, y: 3}
+      - {x: 18, y: 7}
+    - - {x: -18, y: 6}
+      - {x: -21, y: 3}
+      - {x: -22, y: 0}
+      - {x: -18, y: -5}
+      - {x: -16, y: -5}
+      - {x: -11, y: -1}
+      - {x: -11, y: 2}
+      - {x: -16, y: 6}
   spritePackingTag: 
   userData: 
   assetBundleName: 

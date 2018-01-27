@@ -35,11 +35,13 @@ public class DolphinMovement : MonoBehaviour {
 
         transform.Rotate(0,0, horizontal * rotateSpeed);
         rigidbody.AddForce(transform.up * speed * vertical);
-        print(rigidbody.velocity.magnitude);
         Debug.DrawRay(transform.position, rigidbody.velocity);
         if (horizontal > 0 || horizontal < 0) {
             rigidbody.velocity = transform.up * Mathf.Clamp(rigidbody.velocity.magnitude, 0, maxSpeed);
         }
+
+        if (vertical < 0 && rigidbody.velocity.magnitude < 1)
+            rigidbody.velocity = Vector2.zero;
     }
 
     void MouseMovement() {
