@@ -48,7 +48,7 @@ public class WaveGenerator : MonoBehaviour {
 
 			timePassedSinceLastCreatedWave = 0.0f;
 			SpriteRenderer spriteRenderer = waveInst.GetComponent<SpriteRenderer> ();
-			spriteRenderer.material.color = waveColor;
+			spriteRenderer.color = waveColor;
 			spriteRenders.Add (spriteRenderer);
 			currentLifetime = lifetime;
 			waveCreateIndex++;
