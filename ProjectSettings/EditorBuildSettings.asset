@@ -4,4 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Ludvig/Menu.unity
+    guid: eb97718b5f335dd4b999ae7ed013a9dc
+  - enabled: 1
+    path: Assets/Ludvig/Ludvig.unity
+    guid: 6fd74dfbfe9fb954bba345e05bd561b2

@@ -3,15 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class WaveGenerator : MonoBehaviour {
+    
+
+
 	public Color waveColor;
 	public GameObject[] wavePrefabs;
 	public float waveSpeed = 10.0f;
 	public float lifetime = 5.0f;
+    public float spawnFrequency = 0.5f;
+    public float waveSize = 1;
 
 	private GameObject[] waveInstances;
 	private List<SpriteRenderer> spriteRenders = new List<SpriteRenderer>();
-	private float timePassedSinceLastCreatedWave;
 	private int waveCreateIndex = 0;
+
+	private float timePassedSinceLastCreatedWave;
 	private float offsetX = 0.0f;
 	private float fadeOutDelta = 0.0f;
 	private float currentLifetime = 0.0f;
@@ -37,14 +43,14 @@ public class WaveGenerator : MonoBehaviour {
 
 		timePassedSinceLastCreatedWave += Time.deltaTime;
 
-		if (timePassedSinceLastCreatedWave > 0.5f) {
+		if (timePassedSinceLastCreatedWave > spawnFrequency / waveSpeed) {
 			GameObject waveInst = (GameObject) Instantiate(
 				wavePrefabs[waveCreateIndex],
 				transform.position,
 				transform.rotation);
 			waveInstances [waveCreateIndex] = waveInst;
 			waveInst.transform.SetParent(transform);
-
+            waveInst.transform.localScale *= waveSize;
 			timePassedSinceLastCreatedWave = 0.0f;
 			SpriteRenderer spriteRenderer = waveInst.GetComponent<SpriteRenderer> ();
 			spriteRenderer.material.color = waveColor;

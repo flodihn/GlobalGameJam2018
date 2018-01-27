@@ -8,7 +8,9 @@ public class DolphinShoot : MonoBehaviour {
     public float attackSpeed;
     public float bulletSpeed = 5;
 
-    public GameObject radioWave;
+    public float bulletSize = 0.1f;
+
+    public GameObject radioWavePrefab;
 
     GameObject radioWaveHolder;
 
@@ -23,7 +25,9 @@ public class DolphinShoot : MonoBehaviour {
     void Update () {
         Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         if (Input.GetButtonDown("Fire1")) {
-            GameObject bullet = Instantiate(radioWave, radioWaveHolder.transform, true);
+
+
+            GameObject radioWave = Instantiate(radioWavePrefab, radioWaveHolder.transform, true);
 
             Vector3 diff = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
             diff.Normalize();
@@ -32,15 +36,17 @@ public class DolphinShoot : MonoBehaviour {
 
             audioSource.Play();
 
-            
+            radioWave.transform.position = transform.position;
+
+            radioWave.GetComponent<WaveGenerator>().waveSpeed += GetComponent<Rigidbody2D>().velocity.magnitude * 0.1f;
 
             float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
-            bullet.transform.rotation = Quaternion.Euler(0f, 0f, rot_z - 90);
+            radioWave.transform.rotation = Quaternion.Euler(0f, 0f, rot_z );
 
-            bullet.transform.position = transform.position;
 
-            bullet.GetComponent<Rigidbody2D>().AddForce(bullet.transform.up * bulletSpeed);
+            //bullet.GetComponent<Rigidbody2D>().AddForce(bullet.transform.up * bulletSpeed);
 
+            
         }		
 	}
 }
