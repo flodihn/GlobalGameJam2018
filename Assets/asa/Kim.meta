@@ -1,8 +1,15 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/asa/Kim.meta
+guid: a32964123f93b467fa63a83c02c0c916
+folderAsset: yes
+timeCreated: 1517081742
+licenseType: Pro
+=======
 guid: c595f79798671f744bc8dc9cb0a0683a
 folderAsset: yes
 timeCreated: 1517082924
 licenseType: Free
+>>>>>>> 0e23fa4d84e122ddbd4e8bb644a85db6b0133760:Assets/asa/Kim.meta
 DefaultImporter:
   userData: 
   assetBundleName: 
