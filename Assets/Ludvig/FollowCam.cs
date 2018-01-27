@@ -12,6 +12,6 @@ public class FollowCam : MonoBehaviour {
 	}
 
     void Update() {
-		transform.position = new Vector3 (player.transform.position.x, origPos.y, player.transform.position.z);
+		transform.position = new Vector3 (player.transform.position.x, player.transform.position.y, -10);
     }
 }
