@@ -13,8 +13,8 @@ public class DolphinRadioWaveCollider : MonoBehaviour {
             FindObjectOfType<DolphinShoot>().destroyedTrumpTweets++;
             FindObjectOfType<nukeTrigger>().tweetsDestroyedText.text = FindObjectOfType<DolphinShoot>().destroyedTrumpTweets.ToString();
             GetComponent<AudioSource>().Play();
-            Destroy(other.gameObject.transform.parent.gameObject);
-            Destroy(gameObject);
+            Destroy(other.gameObject);
+            Destroy(gameObject.transform.parent);
         }
     }
 

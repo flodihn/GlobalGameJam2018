@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Destroy : MonoBehaviour {
 
+    public float time = 20;
+
 	// Use this for initialization
 	void Start () {
-        Destroy(gameObject, 1f);	
+        Destroy(gameObject, 20);	
 	}
 	
 }

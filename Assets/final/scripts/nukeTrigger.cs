@@ -24,7 +24,7 @@ public class nukeTrigger : MonoBehaviour {
         foreach(RadioWaveLauncher tower in FindObjectsOfType<RadioWaveLauncher>()) {
             tower.enabled = false;
         }
-        yield return new WaitForSeconds(8);
+        yield return new WaitForSeconds(15);
         SceneManager.LoadScene(SceneToLoad);
 
     }

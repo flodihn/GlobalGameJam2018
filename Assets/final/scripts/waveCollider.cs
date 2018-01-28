@@ -24,7 +24,7 @@ public class waveCollider : MonoBehaviour {
 		if (other.tag.Equals ("Kim radio tower")) {
 			//Debug.Log ("Kims radio tower has received Trumps tweet! ");
 			kimSlider.value += 5;
-            Destroy(gameObject.transform.parent.gameObject);
+            Destroy(gameObject);
             GetComponent<AudioSource>().clip = kimJongKunMad;
             GetComponent<AudioSource>().Play();
 		}
@@ -32,8 +32,8 @@ public class waveCollider : MonoBehaviour {
             FindObjectOfType<DolphinShoot>().destroyedTrumpTweets++;
             FindObjectOfType<nukeTrigger>().tweetsDestroyedText.text = FindObjectOfType<DolphinShoot>().destroyedTrumpTweets.ToString();
             Instantiate(other.gameObject.GetComponent<DolphinShoot>().destroyedRadioWaveExplosion, transform.position, Quaternion.identity);
-            Destroy(gameObject.transform.parent.gameObject);
             GetComponent<AudioSource>().Play();
+            Destroy(gameObject);
         }
 	}
 }
