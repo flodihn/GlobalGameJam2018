@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class nukeTrigger : MonoBehaviour {
 
@@ -10,12 +11,29 @@ public class nukeTrigger : MonoBehaviour {
 
     public Sprite[] kimfaces;
 
+    public int SceneToLoad = 3;
+
     public GameObject kimPortrait;
+
+    public Text tweetsDestroyedText;
+
+    public GameObject GameOverText;
+
+    public IEnumerator GameOverNumerator() {
+        GameOverText.SetActive(true);
+        foreach(RadioWaveLauncher tower in FindObjectsOfType<RadioWaveLauncher>()) {
+            tower.enabled = false;
+        }
+        yield return new WaitForSeconds(8);
+        SceneManager.LoadScene(SceneToLoad);
+
+    }
 
 	public void nukeCHange() {
 		if (kimSlider.value == kimSlider.maxValue) {
 		print ("Kim has value " + kimSlider.value);
 			GameObject.Instantiate (nukePrefab, Vector3.zero, Quaternion.identity);
+            StartCoroutine(GameOverNumerator());
 		}
         else if(kimSlider.value > 32 &&  kimSlider.value < 66) {
             print("Dasdas");

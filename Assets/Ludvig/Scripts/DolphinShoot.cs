@@ -30,6 +30,7 @@ public class DolphinShoot : MonoBehaviour {
         radioWaveHolder = new GameObject("radioWaveHolder");
         audioSource = GetComponent<AudioSource>();
     }
+
     void Update () {
         Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         timePassedSinceLastRadioWave += Time.deltaTime;
