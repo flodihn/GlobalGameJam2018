@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 28973201}
   m_Layer: 0
   m_Name: earthCollider
-  m_TagString: nukeTouchdown
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -164,6 +164,111 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &35964419
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 224282556651956256, guid: 36f7f93aba3f445fcb7f5b2a0b56cdc3,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224282556651956256, guid: 36f7f93aba3f445fcb7f5b2a0b56cdc3,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224282556651956256, guid: 36f7f93aba3f445fcb7f5b2a0b56cdc3,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224282556651956256, guid: 36f7f93aba3f445fcb7f5b2a0b56cdc3,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224282556651956256, guid: 36f7f93aba3f445fcb7f5b2a0b56cdc3,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224282556651956256, guid: 36f7f93aba3f445fcb7f5b2a0b56cdc3,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224282556651956256, guid: 36f7f93aba3f445fcb7f5b2a0b56cdc3,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224282556651956256, guid: 36f7f93aba3f445fcb7f5b2a0b56cdc3,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 224282556651956256, guid: 36f7f93aba3f445fcb7f5b2a0b56cdc3,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 114
+      objectReference: {fileID: 0}
+    - target: {fileID: 224282556651956256, guid: 36f7f93aba3f445fcb7f5b2a0b56cdc3,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 179
+      objectReference: {fileID: 0}
+    - target: {fileID: 224282556651956256, guid: 36f7f93aba3f445fcb7f5b2a0b56cdc3,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 224282556651956256, guid: 36f7f93aba3f445fcb7f5b2a0b56cdc3,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 224282556651956256, guid: 36f7f93aba3f445fcb7f5b2a0b56cdc3,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224282556651956256, guid: 36f7f93aba3f445fcb7f5b2a0b56cdc3,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224282556651956256, guid: 36f7f93aba3f445fcb7f5b2a0b56cdc3,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224282556651956256, guid: 36f7f93aba3f445fcb7f5b2a0b56cdc3,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224282556651956256, guid: 36f7f93aba3f445fcb7f5b2a0b56cdc3,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224282556651956256, guid: 36f7f93aba3f445fcb7f5b2a0b56cdc3,
+        type: 2}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114927335864977506, guid: 36f7f93aba3f445fcb7f5b2a0b56cdc3,
+        type: 2}
+      propertyPath: kimSlider
+      value: 
+      objectReference: {fileID: 442997175}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 36f7f93aba3f445fcb7f5b2a0b56cdc3, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &63044908
 GameObject:
   m_ObjectHideFlags: 0
@@ -534,7 +639,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &406677475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1213,12 +1318,12 @@ Prefab:
     - target: {fileID: 114253393077574074, guid: afd0ed70c170e294fa6efdfc96798c50,
         type: 2}
       propertyPath: fuelRecharge
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 50293070308958486, guid: afd0ed70c170e294fa6efdfc96798c50,
         type: 2}
       propertyPath: m_GravityScale
-      value: 0.2
+      value: -0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: afd0ed70c170e294fa6efdfc96798c50, type: 2}
@@ -2516,6 +2621,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 1078839474072436, guid: 666f02dcbf8fcbf4697fd12dce98526d,
+    type: 2}
+  gameOverUIPrefab: {fileID: 1647236837176738, guid: 5203796f88621401d895875fbdbee1b9,
     type: 2}
 --- !u!60 &2072332750
 PolygonCollider2D:
