@@ -19,6 +19,11 @@ public class RadioWaveLauncher : MonoBehaviour {
 
     public void Start() {
 
+        kimTowers = new Transform[GameObject.FindGameObjectsWithTag("Kim radio tower").Length];
+        for (int i = 0; i < kimTowers.Length; i++) {
+            kimTowers[i] = GameObject.FindGameObjectsWithTag("Kim radio tower")[i].transform;
+        }
+
         ball = trumpRadioWave.GetComponent<Rigidbody>();
 
         h = Random.Range(2, h);

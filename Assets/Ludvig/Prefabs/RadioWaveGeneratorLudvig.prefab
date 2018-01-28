@@ -67,7 +67,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dba8f077ffea7e149809da39ae8fc922, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveColor: {r: 0, g: 0, b: 0, a: 1}
+  waveColor: {r: 1, g: 0.5586207, b: 0, a: 1}
   wavePrefabs:
   - {fileID: 1272404251420016, guid: 4c518288c3df3e743b0ee7f62bf7c8fd, type: 2}
   - {fileID: 1595873090412432, guid: 4e980b8472b22a04ba4dab597434dc79, type: 2}

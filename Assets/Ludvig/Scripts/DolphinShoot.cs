@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DolphinShoot : MonoBehaviour {
 
+    public int destroyedTrumpTweets;
+
     public GameObject destroyedRadioWaveExplosion;
 
     public int damage;
