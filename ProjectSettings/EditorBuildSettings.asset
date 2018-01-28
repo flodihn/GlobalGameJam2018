@@ -6,8 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Ludvig/Menu.unity
-    guid: eb97718b5f335dd4b999ae7ed013a9dc
-  - enabled: 0
-    path: Assets/Ludvig/Ludvig.unity
-    guid: 6fd74dfbfe9fb954bba345e05bd561b2
+    path: Assets/final/final_menu.unity
+    guid: c98adebbff81cf0469351d0b416d621b
+  - enabled: 1
+    path: Assets/final/StoryScene.unity
+    guid: 2c986fee1414a934089736c999935319
+  - enabled: 1
+    path: Assets/final/Playarea.unity
+    guid: 35445d8dbbf0e1c4a88ccf06dfdf83f8
