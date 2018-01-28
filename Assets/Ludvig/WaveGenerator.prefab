@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4565314124111546}
-  - component: {fileID: 114373138992783446}
+  - component: {fileID: 114501586513222246}
   m_Layer: 0
   m_Name: WaveGenerator
   m_TagString: Untagged
@@ -40,7 +40,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114373138992783446
+--- !u!114 &114501586513222246
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -48,10 +48,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1808476921492078}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32aa0405dae884631a298e0e09242cb2, type: 3}
+  m_Script: {fileID: 11500000, guid: 9637648f11a07544ea29824dd9f02b94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveColor: {r: 1, g: 0, b: 0, a: 1}
+  waveColor: {r: 1, g: 1, b: 1, a: 1}
   wavePrefabs:
   - {fileID: 1612518776509734, guid: 04228565fc32d499bbbf1f4bb7802287, type: 2}
   - {fileID: 1784158742637448, guid: 182d85e6d1ddc4f9692f898af6f92137, type: 2}
@@ -59,7 +59,7 @@ MonoBehaviour:
   - {fileID: 1595873090412432, guid: 469a01041ea5a4e13ad590cc99b112bd, type: 2}
   - {fileID: 1031340869159604, guid: 82e05fe7510a549be92378892de6d309, type: 2}
   - {fileID: 1572464995116544, guid: 4a3fa356f5dad44b685834141be26b34, type: 2}
-  waveSpeed: 2
+  waveSpeed: 1
   lifetime: 3
+  waveSize: 0.4
   spawnFrequency: 0.1
-  waveSize: 0.5

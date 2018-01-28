@@ -9,6 +9,7 @@ TagManager:
   - kim_slider
   - nuke
   - nukeTouchdown
+  - TrumpTransmission
   layers:
   - Default
   - TransparentFX

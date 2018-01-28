@@ -14,7 +14,7 @@ public class radiotower : MonoBehaviour {
 		timeSinceLastWave = 0;
 	}
 	
-	// Update is called once per frame
+	
 	void Update () {
 		timeSinceLastWave += Time.deltaTime;
 		if (timeSinceLastWave > timeBetweenWaves) {

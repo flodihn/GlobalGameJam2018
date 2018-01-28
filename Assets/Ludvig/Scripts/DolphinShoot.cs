@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DolphinShoot : MonoBehaviour {
 
+    public GameObject destroyedRadioWaveExplosion;
+
     public int damage;
     public float attackSpeed;
     public float bulletSpeed = 5;
@@ -43,7 +45,7 @@ public class DolphinShoot : MonoBehaviour {
 
             radioWave.transform.position = transform.position;
 
-            radioWave.GetComponent<WaveGenerator>().waveSpeed += GetComponent<Rigidbody2D>().velocity.magnitude * 0.1f;
+            radioWave.GetComponent<DolphinWaveGenerator>().waveSpeed += GetComponent<Rigidbody2D>().velocity.magnitude * bulletSpeed;
 
             float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
             radioWave.transform.rotation = Quaternion.Euler(0f, 0f, rot_z );
@@ -51,7 +53,6 @@ public class DolphinShoot : MonoBehaviour {
 
             //bullet.GetComponent<Rigidbody2D>().AddForce(bullet.transform.up * bulletSpeed);
 
-            
         }		
 	}
 }

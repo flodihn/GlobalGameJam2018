@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 222933891153503130}
   - component: {fileID: 212770521023496216}
   - component: {fileID: 60073504604323528}
+  - component: {fileID: 114168925603969044}
   m_Layer: 0
-  m_Name: Wave4
-  m_TagString: Untagged
+  m_Name: Wave10
+  m_TagString: TrumpTransmission
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71,6 +72,17 @@ PolygonCollider2D:
       - {x: -0.044999998, y: -0.77}
       - {x: 0.024999999, y: -0.65999997}
       - {x: 0.125, y: -0.42999998}
+--- !u!114 &114168925603969044
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1019360675201536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35d6a5b34528f62408285b09cfe5d77d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212770521023496216
 SpriteRenderer:
   m_ObjectHideFlags: 1

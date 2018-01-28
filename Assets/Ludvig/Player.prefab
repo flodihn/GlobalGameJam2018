@@ -367,10 +367,13 @@ MonoBehaviour:
   damage: 1
   attackSpeed: 1
   bulletSpeed: 100
-  radioWave: {fileID: 1058896136024080, guid: 79bae58dc1ca5a147a64ea56b8d0effb, type: 2}
+  bulletSize: 0.1
+  radioWavePrefab: {fileID: 1808476921492078, guid: cb43da7e9cce41740b63ed5925944e58,
+    type: 2}
   dolphinShoot:
-  - {fileID: 8300000, guid: 7071da1a26f44724db7586081e993e08, type: 3}
-  - {fileID: 8300000, guid: 06f4486de954f8846b7be3b99f62b415, type: 3}
+  - {fileID: 8300000, guid: 488c6db95abad49ab9ac3c3b0b2be87a, type: 3}
+  - {fileID: 8300000, guid: f1924df5d934e469fb3799e9192011a9, type: 3}
+  echouAttackFrequency: 0.1
 --- !u!212 &212948921579512092
 SpriteRenderer:
   m_ObjectHideFlags: 1

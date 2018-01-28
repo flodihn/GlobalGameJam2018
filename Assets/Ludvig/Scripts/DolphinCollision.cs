@@ -29,7 +29,6 @@ public class DolphinCollision : MonoBehaviour {
         }
 
         averageNormal = averageNormal / collision.contacts.Length;
-        print(averageNormal);
         rigidbody.velocity = averageNormal * bounceStrength;
 
         StartCoroutine(spin());

@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4046581559230848}
-  - component: {fileID: 114683112637233288}
+  - component: {fileID: 114241387112197014}
   m_Layer: 0
   m_Name: TowerWaveGenerator
   m_TagString: Untagged
@@ -40,7 +40,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.133}
---- !u!114 &114683112637233288
+--- !u!114 &114241387112197014
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -48,17 +48,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1656853118552440}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32aa0405dae884631a298e0e09242cb2, type: 3}
+  m_Script: {fileID: 11500000, guid: d76bdd5d3477aba4bbfb87e87af4642e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveColor: {r: 0, g: 0.959, b: 0, a: 1}
-  wavePrefabs:
-  - {fileID: 1472097031815682, guid: 3abf843a484fc8a4591b60bca5daef65, type: 2}
-  - {fileID: 1472097031815682, guid: 3abf843a484fc8a4591b60bca5daef65, type: 2}
-  - {fileID: 1472097031815682, guid: 3abf843a484fc8a4591b60bca5daef65, type: 2}
-  - {fileID: 1472097031815682, guid: 3abf843a484fc8a4591b60bca5daef65, type: 2}
-  - {fileID: 1472097031815682, guid: 3abf843a484fc8a4591b60bca5daef65, type: 2}
-  - {fileID: 1472097031815682, guid: 3abf843a484fc8a4591b60bca5daef65, type: 2}
-  waveSpeed: 1
-  lifetime: 15
-  spawnTime: 0.5
+  kimTowers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  h: 25
+  gravity: -18
