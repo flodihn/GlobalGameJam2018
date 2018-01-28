@@ -335,6 +335,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e5408bfe18bf1745a960c290bfda124, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fuelDrain: 5
+  fuelRecharge: 2
+  fuelSlider: {fileID: 0}
   speed: 3
   rotateSpeed: 2
   mouseMovement: 0
@@ -350,7 +353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f738fd1dad348f14bb0c89220f65f2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bounceStrength: 2
+  bounceStrength: 0.5
   hitSpinStrength: 100
   hitSpinTime: 2
 --- !u!114 &114879705614298720
@@ -364,6 +367,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20d7f196ebd2069469ff8c44594b275b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyedTrumpTweets: 0
+  destroyedRadioWaveExplosion: {fileID: 1252789103159788, guid: 60ab51fcee6c53a4583b8c71e4576767,
+    type: 2}
   damage: 1
   attackSpeed: 1
   bulletSpeed: 100

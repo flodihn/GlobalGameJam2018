@@ -26,10 +26,6 @@ public class DolphinMovement : MonoBehaviour {
         rigidbody = GetComponent<Rigidbody2D>();
     }
 
-	void Update() {
-		
-	}
-
 
     void FixedUpdate() {
         KeyBoardMovement();
@@ -41,7 +37,11 @@ public class DolphinMovement : MonoBehaviour {
     }
 
     void KeyBoardMovement() {
-		if (!Input.GetKey (KeyCode.UpArrow)) {
+
+        float horizontal = -Input.GetAxis("Horizontal");
+        float vertical = Input.GetAxis("Vertical");
+
+		if (vertical < 1) {
 			fuelSlider.value += fuelRecharge;
 		}
 
@@ -49,16 +49,13 @@ public class DolphinMovement : MonoBehaviour {
 			return;
 		}
 		
-        float horizontal = -Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
-
         transform.Rotate(0,0, horizontal * rotateSpeed);
 		if (horizontal > 0 || horizontal < 0) {
-			Debug.Log ("horizontal: " + horizontal);
+			//Debug.Log ("horizontal: " + horizontal);
 			//rigidbody.AddForce (transform.up * speed * vertical * 10.0f);
 		}
 
-		if (Input.GetKey (KeyCode.UpArrow)) {
+		if (vertical > 0) {
 			rigidbody.AddForce (transform.up * 5.0f);
 			fuelSlider.value -= fuelDrain;
 		} 

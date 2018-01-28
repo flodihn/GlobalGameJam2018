@@ -10,6 +10,8 @@ public class DolphinRadioWaveCollider : MonoBehaviour {
         if(other.gameObject.tag == "TrumpTransmission") {
             print("adada");
             Instantiate(explosion, transform.position, Quaternion.identity);
+            FindObjectOfType<DolphinShoot>().destroyedTrumpTweets++;
+
             Destroy(other.gameObject.transform.parent.gameObject);
             Destroy(gameObject);
         }

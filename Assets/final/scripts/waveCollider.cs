@@ -20,11 +20,12 @@ public class waveCollider : MonoBehaviour {
 	public void OnTriggerEnter2D(Collider2D other){
 		//Debug.Log ("YAY! " + other.name);
 		if (other.tag.Equals ("Kim radio tower")) {
-			Debug.Log ("Kims radio tower has received Trumps tweet! ");
-			kimSlider.value += 3;
+			//Debug.Log ("Kims radio tower has received Trumps tweet! ");
+			kimSlider.value += 5;
             Destroy(gameObject.transform.parent.gameObject);
 		}
         else if(other.gameObject.name == "Player") {
+            FindObjectOfType<DolphinShoot>().destroyedTrumpTweets++;
             Instantiate(other.gameObject.GetComponent<DolphinShoot>().destroyedRadioWaveExplosion, transform.position, Quaternion.identity);
         }
         else {
