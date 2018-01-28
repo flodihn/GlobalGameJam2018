@@ -8,22 +8,25 @@ public class nukeTrigger : MonoBehaviour {
 	public Slider kimSlider;
 	public GameObject nukePrefab;
 
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public Sprite[] kimfaces;
+
+    public GameObject kimPortrait;
 
 	public void nukeCHange() {
-		print ("works has value " + kimSlider.value);
 		if (kimSlider.value == kimSlider.maxValue) {
+		print ("Kim has value " + kimSlider.value);
 			GameObject.Instantiate (nukePrefab, Vector3.zero, Quaternion.identity);
 		}
+        else if(kimSlider.value > 32 &&  kimSlider.value < 66) {
+            print("Dasdas");
+            kimPortrait.GetComponent<Image>().sprite = kimfaces[1];
+        }
+        else if (kimSlider.value  > 66) {
+            print("Dasdas");
+            kimPortrait.GetComponent<Image>().sprite = kimfaces[2];
+        }
 
-	}
+    }
 
 
 }

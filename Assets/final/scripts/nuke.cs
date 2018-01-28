@@ -11,7 +11,7 @@ public class nuke : MonoBehaviour {
 		if (other.tag.Equals ("nukeTouchdown")) {
 			GameObject.Instantiate (explosionPrefab, transform.position, Quaternion.identity);
 			GameObject.Instantiate (gameOverUIPrefab, Vector3.zero, Quaternion.identity);
-			GameObject.Destroy (gameObject);
+			GameObject.Destroy (gameObject.transform.parent.gameObject);
 		} else {
 			Debug.Log ("Nuke collided with " + other.name);
 		}

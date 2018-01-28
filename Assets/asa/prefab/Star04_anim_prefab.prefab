@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212213439437593510}
   - component: {fileID: 95031459086582784}
   m_Layer: 0
-  m_Name: Star04
+  m_Name: Star04_anim_prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

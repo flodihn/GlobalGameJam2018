@@ -53,7 +53,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1516715833417906}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.7, z: 0}
+  m_LocalPosition: {x: -7.9543, y: -0.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4362872378545452}
@@ -117,12 +117,17 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.03, y: 0.11}
-      - {x: -0.08, y: 0.099999994}
-      - {x: -0.08, y: -0.14999999}
-      - {x: 0.08, y: -0.14999999}
-      - {x: 0.08, y: 0.089999996}
-      - {x: 0.06, y: 0.11}
+    - - {x: -0.032348156, y: 0.15461242}
+      - {x: -0.105828285, y: 0.07182366}
+      - {x: -0.09902859, y: -0.012403488}
+      - {x: -0.041053772, y: -0.1137228}
+      - {x: -0.08704376, y: -0.16174006}
+      - {x: 0.08234787, y: -0.16174012}
+      - {x: 0.041740417, y: -0.1204316}
+      - {x: 0.056615353, y: -0.08568728}
+      - {x: 0.08264446, y: -0.040453732}
+      - {x: 0.072956085, y: 0.07591194}
+      - {x: 0.02243185, y: 0.14522034}
 --- !u!114 &114394473589590934
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -136,6 +141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 1078839474072436, guid: 666f02dcbf8fcbf4697fd12dce98526d,
     type: 2}
+  gameOverUIPrefab: {fileID: 0}
 --- !u!114 &114443549266768952
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -179,8 +185,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -3
-  m_Sprite: {fileID: 21300000, guid: f7dbbb092fe4c1540ae366fcdc8ba90f, type: 3}
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 21300000, guid: 46de774a5e4fa3444928b2e9521e9456, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

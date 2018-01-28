@@ -30,7 +30,7 @@ public class RadioWaveGenerator : MonoBehaviour {
 
     public void Update() {
         CreateNextWave();
-        FadeOut();
+        //FadeOut();
         
         DestroyWaveIfFadedOut();
         DestroyWaveGeneratorIfReachedLifetime();

@@ -75,7 +75,7 @@ MonoBehaviour:
   - {fileID: 1612518776509734, guid: 67d7aa0880097704b9f50fee4cf4df4a, type: 2}
   - {fileID: 1031340869159604, guid: d75f8beb6e26e8a42b5bf01b4b5424b5, type: 2}
   - {fileID: 1784158742637448, guid: c8dff7920efddab42a5527478bd2727e, type: 2}
-  waveSpeed: 1
-  lifetime: 20
+  waveSpeed: 20
+  lifetime: 40
   waveSize: 0.5
   spawnFrequency: 0.1
